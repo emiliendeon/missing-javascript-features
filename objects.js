@@ -1,3 +1,6 @@
+// edit a property of an object
+const setKey = (object, key, value) => ({ ...object, [key]: value });
+
 // keep only some keys of an object (useful to hide or optimize data)
 const select = (object, keys) => keys.reduce((acc, key) => ({ ...acc, [key]: object[key] }), {});
 
