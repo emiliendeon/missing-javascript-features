@@ -26,6 +26,10 @@ const atomizeByCondition = (array, condition) =>
 // For example, an equivalent of atomizeById would be :
 // atomizeByCondition(array, (item, value) => item.id === +value.id);
 
+// apply a callback on array values that satisfy a condition
+const applyIf = (array, condition, callback) =>
+    array.map((item) => (condition(item) ? callback(item) : item));
+
 // sum array values (or computed values if operations is defined)
 const sum = (array, operation) =>
     operation
