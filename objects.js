@@ -9,11 +9,11 @@ const mapAndSelect = (objects, keys) => objects.map((object) => select(object, k
 
 // exclude some keys of an object (useful to hide or optimize data)
 const except = (object, keys) => {
-    let newObject = { ...object };
-    for (const key of keys) {
-        delete newObject[key];
-    }
-    return newObject;
+	let newObject = { ...object };
+	for (const key of keys) {
+		delete newObject[key];
+	}
+	return newObject;
 };
 
 // apply except operation on an array of objects

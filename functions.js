@@ -1,5 +1,8 @@
 // linearize a composition of functions
-const compose = (...functions) => (data) => functions.reduce((acc, f) => f(acc), data);
+const compose =
+	(...functions) =>
+	(data) =>
+		functions.reduce((acc, f) => f(acc), data);
 
 // Example :
 // const f = (x) => x + 2
