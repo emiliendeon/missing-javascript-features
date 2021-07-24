@@ -2,7 +2,7 @@
 const atomize = (array) =>
 	array.reduce((acc, value) => (acc.includes(value) ? acc : [...acc, value]), []);
 
-// make each element unique in an array of objects, based on the "id" key
+// make each element unique in an array of objects, based on an integer "id" key
 const atomizeById = (array) =>
 	array.reduce(
 		(acc, value) => (acc.some((item) => item.id === +value.id) ? acc : [...acc, value]),
