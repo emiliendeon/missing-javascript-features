@@ -38,3 +38,15 @@ const sum = (array, operation) =>
 
 // sum a custom key in an array of objects
 const sumByKey = (array, key) => array.reduce((acc, value) => acc + value[key], 0);
+
+// randomly sorts an array
+const shuffle = (array) =>
+    array.reduce(
+        (acc, value, index, arr) => [
+            ...acc,
+            arr.filter((x) => !acc.includes(x))[
+                Math.floor(Math.random() * (arr.length - acc.length))
+            ],
+        ],
+        []
+    );
